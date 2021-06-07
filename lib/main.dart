@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:shoppinglist/constants.dart';
+import 'package:shoppinglist/src/routers/app_pages.dart';
  
 void main() => runApp(MyApp());
  
@@ -7,16 +9,16 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Material App',
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Material App Bar'),
-        ),
-        body: Center(
-          child: Container(
-            child: Text('Hello World'),
-          ),
-        ),
+      theme: ThemeData(
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+        primaryColor: AppConstants.kPrimaryColor,
+        primaryColorDark: AppConstants.kPrimaryColorDark,
+        primaryColorLight: AppConstants.kPrimaryColorLight,
+        accentColor: AppConstants.kAccent,
+        backgroundColor: AppConstants.kBackground,
       ),
+      routes: appRoutes,
+      initialRoute: "welcome",
     );
   }
 }
