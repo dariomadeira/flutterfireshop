@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:shoppinglist/src/widgets/input_widget.dart';
 
-class LoginScreen extends StatelessWidget {
-
+class SingInScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("login"),
+        title: Text("registrarse"),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -16,7 +15,10 @@ class LoginScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text('Iniciar sesión'),
+              Text('Registrarse'),
+              InputWidget(
+                title: 'Nombre de usuario',
+              ),
               InputWidget(
                 title: 'email',
               ),
@@ -25,33 +27,15 @@ class LoginScreen extends StatelessWidget {
                 isPassword: true,
               ),
               ElevatedButton(
-                child: Text('Iniciar sesión'),
-                onPressed: () {
-
-                },
-              ), 
-              ElevatedButton(
-                child: Text('Olvidaste contraseña'),
-                onPressed: () {
-
-                },
-              ), 
-              ElevatedButton(
-                child: Text('Inicia sesión con Google'),
-                onPressed: () {
-
-                },
-              ), 
-              ElevatedButton(
                 child: Text('Registrarse'),
                 onPressed: () {
-                  Navigator.pushNamed(context, 'singin');
+
                 },
-              ), 
+              ),
             ],
           ),
         ),
       ),
-   );
+    );
   }
 }

@@ -22,7 +22,7 @@ class WelcomeScreen extends StatelessWidget {
                 ElevatedButton(
                   child: Text('Registarse'),
                   onPressed: () {
-                    print('Registrarse');
+                    Navigator.pushNamed(context, 'singin');
                   },
                 ), 
               ],
